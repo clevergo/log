@@ -1,3 +1,3 @@
-module github.com/clevergo/____
+module github.com/clevergo/log
 
 go 1.13
