@@ -36,21 +36,6 @@ func (l *logger) Debugln(args ...interface{}) {
 	l.SugaredLogger.Debug(args...)
 }
 
-// Fatal implements Logger.Fatal.
-func (l *logger) Fatal(args ...interface{}) {
-	l.SugaredLogger.Fatal(args...)
-}
-
-// Fatalf implements Logger.Fatalf.
-func (l *logger) Fatalf(format string, args ...interface{}) {
-	l.SugaredLogger.Fatalf(format, args...)
-}
-
-// Fatalln implements Logger.Fatalln.
-func (l *logger) Fatalln(args ...interface{}) {
-	l.SugaredLogger.Fatal(args...)
-}
-
 // Info implements Logger.Info.
 func (l *logger) Info(args ...interface{}) {
 	l.SugaredLogger.Info(args...)
@@ -94,4 +79,19 @@ func (l *logger) Errorf(format string, args ...interface{}) {
 // Errorln implements Logger.Errorln.
 func (l *logger) Errorln(args ...interface{}) {
 	l.SugaredLogger.Error(args...)
+}
+
+// Fatal implements Logger.Fatal.
+func (l *logger) Fatal(args ...interface{}) {
+	l.SugaredLogger.Fatal(args...)
+}
+
+// Fatalf implements Logger.Fatalf.
+func (l *logger) Fatalf(format string, args ...interface{}) {
+	l.SugaredLogger.Fatalf(format, args...)
+}
+
+// Fatalln implements Logger.Fatalln.
+func (l *logger) Fatalln(args ...interface{}) {
+	l.SugaredLogger.Fatal(args...)
 }

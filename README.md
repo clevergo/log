@@ -18,10 +18,6 @@ logger.Debug(args ...interface{})
 logger.Debugf(format string, args ...interface{})
 logger.Debugln(args ...interface{})
 
-logger.Fatal(args ...interface{})
-logger.Fatalf(format string, args ...interface{})
-logger.Fatalln(args ...interface{})
-
 logger.Info(args ...interface{})
 logger.Infof(format string, args ...interface{})
 logger.Infoln(args ...interface{})
@@ -33,4 +29,8 @@ logger.Warnln(args ...interface{})
 logger.Error(args ...interface{})
 logger.Errorf(format string, args ...interface{})
 logger.Errorln(args ...interface{})
+
+logger.Fatal(args ...interface{})
+logger.Fatalf(format string, args ...interface{})
+logger.Fatalln(args ...interface{})
 ```
