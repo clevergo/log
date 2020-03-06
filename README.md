@@ -6,8 +6,9 @@
 
 ## Adapters
 
-- [logrus](https://github.com/clevergo/log-logrus)
-- [zap](https://github.com/clevergo/log-zap)
+- [logrus](logrusadapter)
+- [zap](zapadapter)
+- Add your adapter here.
 
 ## Usage
 
