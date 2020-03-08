@@ -5,16 +5,15 @@
 package logrusadapter
 
 import (
-	"github.com/clevergo/log"
 	"github.com/sirupsen/logrus"
 )
 
 // Logger is a logrus logger adapter that implements logger interface.
-type logger struct {
+type Logger struct {
 	*logrus.Logger
 }
 
 // New returns a logger.
-func New(logrusLogger *logrus.Logger) log.Logger {
-	return &logger{logrusLogger}
+func New(logrusLogger *logrus.Logger) *Logger {
+	return &Logger{logrusLogger}
 }

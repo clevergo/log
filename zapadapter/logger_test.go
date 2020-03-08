@@ -11,14 +11,13 @@ import (
 	"os"
 	"testing"
 
-	"github.com/clevergo/log"
 	"go.uber.org/zap"
 )
 
 var (
 	tempLogFile1 *os.File
 	tempLogFile2 *os.File
-	testLogger   log.Logger
+	testLogger   *Logger
 	zaplogger    *zap.SugaredLogger
 )
 
