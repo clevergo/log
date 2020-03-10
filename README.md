@@ -1,4 +1,4 @@
-# Universal leveled logger interface and adapters
+# Generic leveled logger interface and adapters
 [![Build Status](https://travis-ci.org/clevergo/log.svg?branch=master)](https://travis-ci.org/clevergo/log)
 [![Coverage Status](https://coveralls.io/repos/github/clevergo/log/badge.svg?branch=master)](https://coveralls.io/github/clevergo/log?branch=master)
 [![GoDoc](https://img.shields.io/badge/godoc-reference-blue)](https://pkg.go.dev/github.com/clevergo/log)
