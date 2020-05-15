@@ -3,6 +3,7 @@
 [![GoDoc](https://img.shields.io/badge/godoc-reference-blue)](https://pkg.go.dev/github.com/clevergo/log)
 [![Go Report Card](https://goreportcard.com/badge/github.com/clevergo/log)](https://goreportcard.com/report/github.com/clevergo/log)
 [![Release](https://img.shields.io/github/release/clevergo/log.svg?style=flat-square)](https://github.com/clevergo/log/releases)
+[![Sourcegraph](https://sourcegraph.com/github.com/clevergo/log/-/badge.svg)](https://sourcegraph.com/github.com/clevergo/log?badge)
 
 ## Usage
 
