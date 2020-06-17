@@ -4,7 +4,7 @@
 
 package log
 
-// Logger is a general logger intercae.
+// Logger is a general logger interface.
 type Logger interface {
 	Debug(args ...interface{})
 	Debugf(format string, args ...interface{})
