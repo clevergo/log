@@ -3,11 +3,14 @@
 [![Go.Dev reference](https://img.shields.io/badge/go.dev-reference-blue?logo=go&logoColor=white)](https://pkg.go.dev/clevergo.tech/log?tab=doc)
 [![Go Report Card](https://goreportcard.com/badge/github.com/clevergo/log)](https://goreportcard.com/report/github.com/clevergo/log)
 [![Release](https://img.shields.io/github/release/clevergo/log.svg?style=flat-square)](https://github.com/clevergo/log/releases)
-[![Sourcegraph](https://sourcegraph.com/github.com/clevergo/log/-/badge.svg)](https://sourcegraph.com/github.com/clevergo/log?badge)
 
 ## Usage
 
 Checkout [example](https://github.com/clevergo/examples/tree/master/log) for details.
+
+```shell
+go get clevergo.tech/log
+```
 
 ### Zap
 
