@@ -13,13 +13,13 @@ Checkout [example](https://github.com/clevergo/examples/tree/master/log) for det
 go get clevergo.tech/log
 ```
 
-### Zap
+### Logrus
 
 ```go
 var logger log.Logger = logrus.New()
 ```
 
-### Logrus
+### Zap
 
 ```go
 var logger log.Logger = zap.NewExample().Sugar()
