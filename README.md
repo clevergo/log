@@ -10,18 +10,42 @@
 Checkout [example](https://github.com/clevergo/examples/tree/master/log) for details.
 
 ```shell
-go get clevergo.tech/log
+go get -u clevergo.tech/log
+```
+
+### Standard Logger
+
+`StdLogger` wraps Go standard logger `log.Logger`.
+
+```go
+import (
+    stdlog "log"
+
+    "clevergo.tech/log"
+)
+
+var logger log.Logger = log.New(os.Stderr, "", stdlog.LstdFlags)
 ```
 
 ### Logrus
 
 ```go
+import (
+    "clevergo.tech/log"
+    "github.com/sirupsen/logrus"
+)
+
 var logger log.Logger = logrus.New()
 ```
 
 ### Zap
 
 ```go
+import (
+    "clevergo.tech/log"
+    "go.uber.org/zap"
+)
+
 var logger log.Logger = zap.NewExample().Sugar()
 ```
 
