@@ -28,9 +28,8 @@ func TestStdLogger(t *testing.T) {
 		{"error", "", []interface{}{"error"}, "error"},
 		{"errorf", "msg: %s", []interface{}{"errorf"}, "msg: errorf"},
 	}
-	logger := New()
 	out := &bytes.Buffer{}
-	log.SetOutput(out)
+	logger := New(out, "", log.LstdFlags)
 	for _, test := range cases {
 		out.Reset()
 		switch test.method {

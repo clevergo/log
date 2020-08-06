@@ -5,6 +5,7 @@
 package log
 
 import (
+	"io"
 	"log"
 )
 
@@ -26,63 +27,66 @@ type Logger interface {
 	Fatalf(format string, args ...interface{})
 }
 
-var _ Logger = New()
+var _ Logger = (*StdLogger)(nil)
 
 // StdLogger is a wrapper of standard logger.
 type StdLogger struct {
+	*log.Logger
 }
 
 // New returns a standard logger.
-func New() *StdLogger {
-	return &StdLogger{}
+func New(out io.Writer, prefix string, flag int) *StdLogger {
+	return &StdLogger{
+		Logger: log.New(out, prefix, flag),
+	}
 }
 
 // Debug implements Logger's Debug.
 func (l *StdLogger) Debug(args ...interface{}) {
-	log.Print(args...)
+	l.Print(args...)
 }
 
 // Debugf implements Logger's Debugf.
 func (l *StdLogger) Debugf(format string, args ...interface{}) {
-	log.Printf(format, args...)
+	l.Printf(format, args...)
 }
 
 // Info implements Logger's Info.
 func (l *StdLogger) Info(args ...interface{}) {
-	log.Print(args...)
+	l.Print(args...)
 }
 
 // Infof implements Logger's Infof.
 func (l *StdLogger) Infof(format string, args ...interface{}) {
-	log.Printf(format, args...)
+	l.Printf(format, args...)
 }
 
 // Warn implements Logger's Warn.
 func (l *StdLogger) Warn(args ...interface{}) {
-	log.Print(args...)
+	l.Print(args...)
 }
 
 // Warnf implements Logger's Warnf.
 func (l *StdLogger) Warnf(format string, args ...interface{}) {
-	log.Printf(format, args...)
+	l.Printf(format, args...)
 }
 
 // Error implements Logger's Error.
 func (l *StdLogger) Error(args ...interface{}) {
-	log.Print(args...)
+	l.Print(args...)
 }
 
 // Errorf implements Logger's Errorf.
 func (l *StdLogger) Errorf(format string, args ...interface{}) {
-	log.Printf(format, args...)
+	l.Printf(format, args...)
 }
 
 // Fatal implements Logger's Fatal.
 func (l *StdLogger) Fatal(args ...interface{}) {
-	log.Fatal(args...)
+	l.Fatal(args...)
 }
 
 // Fatalf implements Logger's Fatalf.
 func (l *StdLogger) Fatalf(format string, args ...interface{}) {
-	log.Fatalf(format, args...)
+	l.Fatalf(format, args...)
 }
